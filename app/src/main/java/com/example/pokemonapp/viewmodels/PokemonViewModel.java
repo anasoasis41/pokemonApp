@@ -38,7 +38,7 @@ public class PokemonViewModel extends ViewModel {
         repository.getPokemons()
                 .subscribeOn(Schedulers.io())
                 .map((Function<PokemonResponse, ArrayList<Pokemon>>) pokemonResponse -> {
-                    ArrayList<Pokemon> list = pokemonResponse.getResult();
+                    ArrayList<Pokemon> list = pokemonResponse.getResults();
                     for (Pokemon pokemon: list) {
                         String url = pokemon.getUrl();
                         String[] pokemonIndex = url.split("/");

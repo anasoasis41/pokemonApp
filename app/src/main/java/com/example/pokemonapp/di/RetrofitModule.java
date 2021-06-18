@@ -8,12 +8,13 @@ import dagger.Module;
 import dagger.Provides;
 import dagger.hilt.InstallIn;
 import dagger.hilt.android.internal.managers.ApplicationComponentManager;
+import dagger.hilt.components.SingletonComponent;
 import hu.akarnokd.rxjava3.retrofit.RxJava3CallAdapterFactory;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 @Module
-@InstallIn(ApplicationComponentManager.class)
+@InstallIn(SingletonComponent.class)
 public class RetrofitModule {
 
     @Provides
